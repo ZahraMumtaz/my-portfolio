@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.font-display {
+  font-family: 'Syne', sans-serif;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #38bdf8 0%, #22d3ee 50%, #34d399 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow {
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.15);
+}
+
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(56, 189, 248, 0.2);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.5),
+                0 0 40px rgba(34, 211, 238, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.8),
+                0 0 60px rgba(34, 211, 238, 0.4);
+  }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-in-left {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-in-right {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+@keyframes rotate-border {
+  0% { border-color: rgb(56, 189, 248); }
+  25% { border-color: rgb(34, 211, 238); }
+  50% { border-color: rgb(52, 211, 153); }
+  75% { border-color: rgb(34, 211, 238); }
+  100% { border-color: rgb(56, 189, 248); }
+}
+
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.15;
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+    opacity: 0.2;
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+    opacity: 0.15;
+  }
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-glow-pulse {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.7s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slide-in-left 0.7s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slide-in-right 0.7s ease-out forwards;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  background-size: 1000px 100%;
+  animation: shimmer 3s infinite;
+}
+
+.animate-rotate-border {
+  animation: rotate-border 6s ease-in-out infinite;
+}
+
+.animate-blob {
+  animation: blob 7s ease-in-out infinite;
+}
+
+.animate-scan {
+  animation: scan 3s ease-in infinite;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 15, 30, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #38bdf8, #34d399);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #22d3ee, #38bdf8);
+}
+
+/* Smooth page transitions */
+@keyframes page-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body {
+  animation: page-in 0.4s ease-out;
+}
+
+/* Enhanced focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Improved text rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Performance: reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Link underline animation */
+a {
+  text-decoration: none;
+}
+
+a:not([class*="flex"]):not([class*="px"]) {
+  position: relative;
+}
+
+/* Loading state pulse */
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Smooth anchor scrolling enhancement */
+html {
+  scroll-padding-top: 80px;
+}
