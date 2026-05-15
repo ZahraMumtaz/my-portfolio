@@ -24,7 +24,6 @@ export default function Header({ scrolled }: HeaderProps) {
           ? 'bg-[#0a0f1e]/85 backdrop-blur-xl py-3 shadow-lg shadow-sky-500/10'
           : 'bg-transparent py-5'
       }`}
-      style={scrolled ? { borderBottom: '1px solid rgba(56,189,248,0.2)' } : undefined}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a
