@@ -1,4 +1,4 @@
-import { GraduationCap, Award, Calendar, MapPin, FileText } from 'lucide-react';
+import { GraduationCap, Award, Calendar, MapPin } from 'lucide-react';
 
 export default function Education() {
   return (
@@ -101,56 +101,6 @@ export default function Education() {
             </div>
           </div>
 
-          {/* Certificates Section */}
-          <div className="max-w-3xl mx-auto">
-            <h3 className="font-display text-2xl font-bold text-white mb-8 text-center">Certificates</h3>
-            <div className="grid md:grid-cols-1 gap-8">
-              {/* Certificate Card */}
-              <div
-                className="group bg-gradient-to-br from-amber-500/10 to-amber-500/5 border border-amber-500/20 rounded-2xl p-8 card-hover relative overflow-hidden animate-fade-up"
-                style={{ animationDelay: '0.3s' }}
-              >
-                {/* Background glow */}
-                <div className="absolute -inset-20 bg-amber-500/20 opacity-0 group-hover:opacity-10 blur-3xl transition-opacity duration-500" />
-
-                {/* Top accent line */}
-                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-30 group-hover:opacity-60 transition-opacity" />
-
-                <div className="relative">
-                  <div className="w-12 h-12 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center mb-6 group-hover:bg-amber-500/30 transition-all duration-300">
-                    <FileText size={24} className="text-amber-400" />
-                  </div>
-
-                  <h3 className="font-display text-2xl font-bold text-white group-hover:gradient-text transition-all mb-4">
-                    Certificate of Achievement
-                  </h3>
-
-                  {/* PDF Preview */}
-                  <div className="mb-6 rounded-lg overflow-hidden border border-amber-500/30 bg-slate-900/50">
-                    <embed
-                      src="/Zahra_Mumtaz_certificate_3160703.pdf"
-                      type="application/pdf"
-                      className="w-full h-64 rounded-lg"
-                    />
-                  </div>
-
-                  {/* Download Link */}
-                  <a
-                    href="/Zahra_Mumtaz_certificate_3160703.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors text-sm font-medium"
-                  >
-                    <FileText size={16} />
-                    Download Certificate
-                  </a>
-                </div>
-
-                {/* Bottom accent */}
-                <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
