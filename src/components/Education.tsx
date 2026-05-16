@@ -58,7 +58,7 @@ export default function Education() {
           </div>
 
           {/* Certifications */}
-          <div className="max-w-3xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h3 className="font-display text-2xl font-bold text-white mb-8 text-center">Certifications</h3>
             <div className="grid md:grid-cols-1 gap-8">
               {/* Certification */}
@@ -72,26 +72,38 @@ export default function Education() {
                 {/* Top accent line */}
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-400 to-transparent opacity-30 group-hover:opacity-60 transition-opacity" />
 
-                <div className="relative">
-                  <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center mb-6 group-hover:bg-emerald-500/30 transition-all duration-300">
-                    <Award size={24} className="text-emerald-400" />
+                <div className="relative grid md:grid-cols-2 gap-8 items-start">
+                  {/* Left: Details */}
+                  <div>
+                    <div className="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center mb-6 group-hover:bg-emerald-500/30 transition-all duration-300">
+                      <Award size={24} className="text-emerald-400" />
+                    </div>
+
+                    <div className="mb-4">
+                      <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold mb-1">
+                        <Calendar size={13} />
+                        Apr 2026
+                      </div>
+                      <h3 className="font-display text-2xl font-bold text-white group-hover:gradient-text transition-all mb-2">
+                        MongoDB Essential Training
+                      </h3>
+                      <div className="flex items-center gap-2 text-slate-400 text-sm mb-3">
+                        <Award size={14} />
+                        LinkedIn Learning
+                      </div>
+                      <p className="text-slate-500 text-xs break-all font-mono">
+                        Credential ID: 3e5f08a24a519bb555e2be5b235528d0e088d0f0...
+                      </p>
+                    </div>
                   </div>
 
-                  <div className="mb-4">
-                    <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold mb-1">
-                      <Calendar size={13} />
-                      Apr 2026
-                    </div>
-                    <h3 className="font-display text-2xl font-bold text-white group-hover:gradient-text transition-all mb-2">
-                      MongoDB Essential Training
-                    </h3>
-                    <div className="flex items-center gap-2 text-slate-400 text-sm mb-3">
-                      <Award size={14} />
-                      LinkedIn Learning
-                    </div>
-                    <p className="text-slate-500 text-xs break-all font-mono">
-                      Credential ID: 3e5f08a24a519bb555e2be5b235528d0e088d0f0...
-                    </p>
+                  {/* Right: Certificate Image */}
+                  <div className="rounded-lg overflow-hidden border border-emerald-500/30 bg-slate-900/50">
+                    <img
+                      src="/certificate_3160703.jpg"
+                      alt="MongoDB Certificate"
+                      className="w-full h-auto object-cover"
+                    />
                   </div>
                 </div>
 
