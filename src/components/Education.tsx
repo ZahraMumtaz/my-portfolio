@@ -127,10 +127,10 @@ export default function Education() {
 
                   {/* PDF Preview */}
                   <div className="mb-6 rounded-lg overflow-hidden border border-amber-500/30 bg-slate-900/50">
-                    <iframe
+                    <embed
                       src="/Zahra_Mumtaz_certificate_3160703.pdf"
+                      type="application/pdf"
                       className="w-full h-64 rounded-lg"
-                      title="Certificate Preview"
                     />
                   </div>
 
