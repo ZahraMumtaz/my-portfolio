@@ -74,13 +74,16 @@ export default function Education() {
 
                 <div className="relative w-full h-full flex flex-col">
                   {/* Certificate Image - Top Half */}
-                  <div className="w-full h-1/2 overflow-hidden relative bg-slate-900/50">
+                  <button
+                    onClick={() => window.open('/certificate_3160703.jpg', '_blank')}
+                    className="w-full h-1/2 overflow-hidden relative bg-slate-900/50 cursor-pointer"
+                  >
                     <img
                       src="/certificate_3160703.jpg"
                       alt="MongoDB Certificate"
                       className="image-zoom w-full h-full object-cover transition-transform duration-500 ease-out"
                     />
-                  </div>
+                  </button>
 
                   {/* Details - Bottom Half */}
                   <div className="w-full h-1/2 p-4 flex flex-col justify-center text-center">
