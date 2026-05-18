@@ -146,6 +146,10 @@ body {
   perspective: 1000px;
 }
 
+.group:hover .image-zoom {
+  animation: zoom-in 0.5s ease-out forwards;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -223,6 +227,11 @@ a:not([class*="flex"]):not([class*="px"]) {
 @keyframes float-vertical {
   0%, 100% { transform: translateY(0px) rotateY(0deg) rotateX(5deg); }
   50% { transform: translateY(-20px) rotateY(10deg) rotateX(5deg); }
+}
+
+@keyframes zoom-in {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
 }
 
 /* Smooth anchor scrolling enhancement */

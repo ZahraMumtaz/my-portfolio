@@ -63,7 +63,7 @@ export default function Education() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Certification Card */}
               <div
-                className="group bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 rounded-xl p-6 card-hover relative overflow-hidden animate-fade-up"
+                className="group bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 rounded-xl card-hover relative overflow-hidden animate-fade-up h-80"
                 style={{ animationDelay: '0.2s' }}
               >
                 {/* Background glow */}
@@ -72,38 +72,33 @@ export default function Education() {
                 {/* Top accent line */}
                 <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-400 to-transparent opacity-30 group-hover:opacity-60 transition-opacity" />
 
-                <div className="relative flex flex-col h-full">
-                  {/* Certificate Image - Vertical with Animation */}
-                  <div className="mb-4 flex justify-center flex-1">
-                    <div className="rounded-lg overflow-hidden border border-emerald-500/30 bg-slate-900/50 shadow-lg animate-float-vertical w-32" style={{ perspective: '1000px' }}>
-                      <img
-                        src="/certificate_3160703.jpg"
-                        alt="MongoDB Certificate"
-                        className="w-full h-auto object-cover"
-                      />
-                    </div>
+                <div className="relative w-full h-full flex flex-col">
+                  {/* Certificate Image - Top Half */}
+                  <div className="w-full h-1/2 overflow-hidden relative bg-slate-900/50">
+                    <img
+                      src="/certificate_3160703.jpg"
+                      alt="MongoDB Certificate"
+                      className="image-zoom w-full h-full object-cover transition-transform duration-500 ease-out"
+                    />
                   </div>
 
-                  {/* Details */}
-                  <div className="text-center">
-                    <div className="w-10 h-10 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center mb-2 group-hover:bg-emerald-500/30 transition-all duration-300 mx-auto">
-                      <Award size={18} className="text-emerald-400" />
+                  {/* Details - Bottom Half */}
+                  <div className="w-full h-1/2 p-4 flex flex-col justify-center text-center">
+                    <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center mb-2 group-hover:bg-emerald-500/30 transition-all duration-300 mx-auto">
+                      <Award size={16} className="text-emerald-400" />
                     </div>
 
                     <div className="flex items-center justify-center gap-1 text-emerald-400 text-xs font-bold mb-1">
-                      <Calendar size={12} />
+                      <Calendar size={11} />
                       Apr 2026
                     </div>
-                    <h3 className="font-display text-lg font-bold text-white group-hover:gradient-text transition-all mb-1 line-clamp-2">
+                    <h3 className="font-display text-sm font-bold text-white group-hover:gradient-text transition-all mb-1 line-clamp-2">
                       MongoDB Essential Training
                     </h3>
-                    <div className="flex items-center justify-center gap-1 text-slate-400 text-xs mb-2">
-                      <Award size={12} />
+                    <div className="flex items-center justify-center gap-1 text-slate-400 text-xs">
+                      <Award size={11} />
                       LinkedIn Learning
                     </div>
-                    <p className="text-slate-500 text-xs break-all font-mono line-clamp-1">
-                      3e5f08a24a519bb555e2be5b...
-                    </p>
                   </div>
                 </div>
 
