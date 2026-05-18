@@ -136,6 +136,16 @@ body {
   animation: scan 3s ease-in infinite;
 }
 
+.animate-rotate-y {
+  animation: rotate-y 6s ease-in-out infinite;
+  perspective: 1000px;
+}
+
+.animate-float-vertical {
+  animation: float-vertical 5s ease-in-out infinite;
+  perspective: 1000px;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -198,6 +208,21 @@ a:not([class*="flex"]):not([class*="px"]) {
 @keyframes pulse-glow {
   0%, 100% { opacity: 0.6; }
   50% { opacity: 1; }
+}
+
+@keyframes rotate-y {
+  0%, 100% {
+    transform: rotateY(0deg) rotateX(5deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotateY(15deg) rotateX(5deg);
+  }
+}
+
+@keyframes float-vertical {
+  0%, 100% { transform: translateY(0px) rotateY(0deg) rotateX(5deg); }
+  50% { transform: translateY(-20px) rotateY(10deg) rotateX(5deg); }
 }
 
 /* Smooth anchor scrolling enhancement */
