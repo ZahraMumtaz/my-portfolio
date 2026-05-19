@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Linkedin, Phone, Send, CircleCheck as CheckCircle2, MessageSquare, Globe } from 'lucide-react';
+import { Mail, Linkedin, Phone, Send, CircleCheck as CheckCircle2, MessageSquare, Award, Calendar } from 'lucide-react';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -186,6 +186,60 @@ export default function Contact() {
                   </button>
                 </form>
               )}
+            </div>
+          </div>
+        </div>
+
+        {/* Certifications Section */}
+        <div className="mt-24">
+          <h3 className="font-display text-2xl font-bold text-white mb-8 text-center">Certifications</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {/* Certification Card */}
+            <div
+              className="group bg-gradient-to-br from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 rounded-xl card-hover relative overflow-hidden animate-fade-up h-80"
+              style={{ animationDelay: '0.2s' }}
+            >
+              {/* Background glow */}
+              <div className="absolute -inset-20 bg-emerald-500/20 opacity-0 group-hover:opacity-10 blur-3xl transition-opacity duration-500" />
+
+              {/* Top accent line */}
+              <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-400 to-transparent opacity-30 group-hover:opacity-60 transition-opacity" />
+
+              <div className="relative w-full h-full flex flex-col">
+                {/* Certificate Image - Top Half */}
+                <button
+                  onClick={() => window.open('/certificate_3160703.jpg', '_blank')}
+                  className="w-full h-1/2 overflow-hidden relative bg-slate-900/50 cursor-pointer"
+                >
+                  <img
+                    src="/certificate_3160703.jpg"
+                    alt="MongoDB Certificate"
+                    className="image-zoom w-full h-full object-cover transition-transform duration-500 ease-out"
+                  />
+                </button>
+
+                {/* Details - Bottom Half */}
+                <div className="w-full h-1/2 p-4 flex flex-col justify-center text-center">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-500/40 flex items-center justify-center mb-2 group-hover:bg-emerald-500/30 transition-all duration-300 mx-auto">
+                    <Award size={16} className="text-emerald-400" />
+                  </div>
+
+                  <div className="flex items-center justify-center gap-1 text-emerald-400 text-xs font-bold mb-1">
+                    <Calendar size={11} />
+                    Apr 2026
+                  </div>
+                  <h3 className="font-display text-sm font-bold text-white group-hover:gradient-text transition-all mb-1 line-clamp-2">
+                    MongoDB Essential Training
+                  </h3>
+                  <div className="flex items-center justify-center gap-1 text-slate-400 text-xs">
+                    <Award size={11} />
+                    LinkedIn Learning
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom accent */}
+              <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-400/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             </div>
           </div>
         </div>
