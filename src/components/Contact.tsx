@@ -84,15 +84,15 @@ export default function Contact() {
               </div>
 
               {/* Availability */}
-              <div className="p-5 bg-gradient-to-r from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 rounded-xl">
-                <div className="flex items-center gap-3 mb-2">
-                  <span className="relative flex h-3 w-3">
+              <div className="p-6 bg-gradient-to-r from-emerald-500/10 to-emerald-500/5 border border-emerald-500/20 rounded-xl space-y-3">
+                <div className="flex items-center gap-3">
+                  <span className="relative flex h-3 w-3 flex-shrink-0">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
                   </span>
                   <span className="text-emerald-400 text-sm font-bold">Available Now</span>
                 </div>
-                <p className="text-slate-400 text-xs leading-relaxed">
+                <p className="text-slate-400 text-sm leading-relaxed pl-6">
                   Currently taking on new freelance projects and collaborations. Typical response time: within 12 hours.
                 </p>
               </div>
