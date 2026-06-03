@@ -30,9 +30,9 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start max-w-5xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-stretch max-w-5xl mx-auto">
           {/* Left: Contact info */}
-          <div className="animate-slide-left" style={{ animationDelay: '0.2s' }}>
+          <div className="animate-slide-left flex flex-col" style={{ animationDelay: '0.2s' }}>
             <p className="text-slate-400 leading-relaxed mb-10 text-base">
               Whether you need a scalable backend API, a complete full-stack product, or AI-powered features — I'm ready to bring your vision to life with clean architecture and measurable results. Let's connect and explore possibilities.
             </p>
@@ -101,7 +101,7 @@ export default function Contact() {
 
           {/* Right: Form */}
           <div
-            className="animate-slide-right"
+            className="animate-slide-right flex flex-col"
             style={{ animationDelay: '0.2s' }}
           >
             <div className="bg-gradient-to-br from-white/[0.08] to-white/[0.02] border border-white/10 rounded-2xl p-8 card-hover relative overflow-hidden">
